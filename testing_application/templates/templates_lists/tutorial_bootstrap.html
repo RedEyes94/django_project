@@ -1,0 +1,20 @@
+{% extends 'templates_lists/common.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for roll in rolls %}
+        <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ roll.immagine.url }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ roll.nome }} Roll</h5>
+                    <p class="card-text">${{ roll.prezzo }}</p>
+                    <a href="#" class="btn btn-primary">Acquista</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
